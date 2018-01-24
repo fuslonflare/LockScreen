@@ -1,18 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/default_margin"
     tools:context="com.phuwarin.lockscreen.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/button_lock_screen"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:onClick="lockScreen"
+        android:text="@string/text_button_lock_screen" />
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/button_enable_admin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="enableAdminPermission"
+            android:text="@string/text_button_enable" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/button_disable_admin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="disableAdminPermission"
+            android:text="@string/text_button_disable" />
+
+    </LinearLayout>
+
+</LinearLayout>

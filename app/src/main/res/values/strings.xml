@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">LockScreen</string>
+
+    <string name="text_button_lock_screen">Lock Screen</string>
+    <string name="text_button_enable">Enable Admin Permission</string>
+    <string name="text_button_disable">Disable Admin Permission</string>
 </resources>
